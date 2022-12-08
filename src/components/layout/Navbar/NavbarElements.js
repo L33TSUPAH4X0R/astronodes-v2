@@ -12,6 +12,7 @@ export const Nav = styled.nav`
   position: fixed; /* Set the navbar to fixed position */
   width: 100%; /* Full width */
   font-size: 12px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
 `;
 
 export const NavLink = styled(Link)`
@@ -39,7 +40,7 @@ export const Logo = styled.a`
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
-  height: 100%;
+  height: 113%;
   cursor: pointer;
 `;
 
