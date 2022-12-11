@@ -1,0 +1,22 @@
+
+
+
+.hr1 {
+
+    border:         none;
+    border-left:    1px solid black;
+    height:         300px;
+    width:          1px;
+    margin-left: 60px;
+
+}
+
+
+@media screen and (max-width: 960px){
+
+    p{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}

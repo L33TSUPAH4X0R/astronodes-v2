@@ -2,17 +2,12 @@ import styled from "styled-components";
 import { NavLink as Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-export const Nav = styled.nav`
+export const Nav = styled.div`
   background: #f7f4f5;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem calc((100vw - 1200px) / 2);
-  z-index: 999;
   position: fixed; /* Set the navbar to fixed position */
   width: 100%; /* Full width */
+  height: 100%;
   font-size: 12px;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
 `;
 
 export const NavLink = styled(Link)`
@@ -40,7 +35,6 @@ export const Logo = styled.a`
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
-  height: 113%;
   cursor: pointer;
 `;
 

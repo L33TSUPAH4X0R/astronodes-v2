@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import NavbarMobile from "./NavbarMobile";
 
 import {
   Nav,
   NavLink,
-  Bars,
+  Hamburger,
   NavMenu,
   NavBtn,
   Pline,
@@ -12,6 +13,13 @@ import {
 } from "./NavbarElements";
 
 const Navbar = () => {
+  const [extendNavbar, setExtendNavbar] = useState(false);
+
+  const extendNavbarHandler = () => {
+    setExtendNavbar((curr) => !curr);
+    console.log(extendNavbar);
+  };
+
   return (
     <React.Fragment>
       <Nav>
@@ -24,7 +32,11 @@ const Navbar = () => {
           />
           <h1 style={{ marginLeft: "10px" }}>ASTRONODES</h1>
         </Logo>
-        <Bars />
+        <Hamburger
+          onClick={() => {
+            setExtendNavbar((curr) => !curr);
+          }}
+        />
         <NavMenu>
           <NavLink to="/">
             <h1>Home</h1>
@@ -47,6 +59,9 @@ const Navbar = () => {
           <Pline />
           <Lang>TR</Lang>
         </NavBtn>
+        {extendNavbar && (
+          <NavbarMobile extendNavbarHandler={extendNavbarHandler} />
+        )}
       </Nav>
     </React.Fragment>
   );
